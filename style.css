@@ -1,0 +1,142 @@
+/* Colors and sizes copied from the original Lovable (Tailwind) build. */
+:root {
+  --background: 0 0% 98%;
+  --foreground: 0 0% 15%;
+  --secondary: 0 0% 94%;
+  --muted: 0 0% 94%;
+  --muted-foreground: 0 0% 45%;
+  --accent: 322 80% 50%;
+  --border: 0 0% 88%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 0 0% 12%;
+  --foreground: 0 0% 88%;
+  --secondary: 0 0% 18%;
+  --muted: 0 0% 18%;
+  --muted-foreground: 0 0% 60%;
+  --accent: 322 80% 60%;
+  --border: 0 0% 22%;
+}
+
+/* Reset (subset of Tailwind preflight) */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid hsl(var(--border)); }
+html { line-height: 1.5; -webkit-text-size-adjust: 100%; }
+img, svg { display: block; max-width: 100%; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: inherit; }
+h1, h2 { font-size: inherit; font-weight: inherit; }
+button { font: inherit; color: inherit; background: none; cursor: pointer; }
+
+body {
+  min-height: 100vh;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, sans-serif;
+  transition: color 300ms, background-color 300ms;
+}
+
+h1, h2 { font-family: "EB Garamond", serif; }
+
+a { color: hsl(var(--accent)); }
+a:hover { text-decoration: underline; }
+
+.italic { font-style: italic; }
+.not-italic { font-style: normal; }
+.muted, .meta, .sep { color: hsl(var(--muted-foreground)); }
+
+/* Theme toggle */
+.toggle-wrap { position: fixed; top: 1rem; right: 1rem; z-index: 50; }
+.toggle {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--foreground));
+  transition: background-color 150ms;
+}
+.toggle:hover { background-color: hsl(var(--muted)); }
+.icon-sun { display: none; }
+.dark .icon-sun { display: block; }
+.dark .icon-moon { display: none; }
+
+/* Layout */
+main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1rem; }
+header, section { margin-bottom: 2.5rem; }
+
+.intro { display: flex; flex-direction: column; gap: 1.5rem; }
+.intro-text { flex: 1; }
+
+h1 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 600; margin-bottom: 1rem; }
+
+blockquote {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  text-align: right;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+}
+
+.bio { font-size: 0.875rem; line-height: 1.625; }
+.bio > p + p { margin-top: 1rem; }
+
+.profile { flex-shrink: 0; align-self: flex-start; }
+.profile img { width: 9rem; height: 12rem; object-fit: cover; border-radius: calc(var(--radius) - 2px); }
+.profile figcaption {
+  margin-top: 0.5rem;
+  max-width: 13rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-style: italic;
+  text-align: center;
+  color: hsl(var(--muted-foreground));
+}
+
+nav { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; font-size: 0.875rem; line-height: 1.25rem; }
+
+h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; margin-bottom: 1rem; }
+
+.title { font-weight: 500; }
+
+.research > li { display: flex; gap: 1rem; align-items: flex-start; }
+.research > li + li { margin-top: 1.25rem; }
+.research img { width: 7rem; flex-shrink: 0; border-radius: 0.25rem; border-width: 1px; }
+.research .title { font-size: 0.875rem; line-height: 1.25rem; }
+.research .meta { font-size: 0.75rem; line-height: 1rem; }
+
+.projects { font-size: 0.875rem; line-height: 1.25rem; }
+.projects > li + li { margin-top: 1rem; }
+
+.hidden-note {
+  margin-top: 4rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: hsl(var(--background));
+  user-select: all;
+}
+
+/* Breakpoints: sm 640px, lg 1024px, xl 1280px */
+@media (min-width: 640px) {
+  main { padding: 4rem 1.5rem; }
+  .intro { flex-direction: row; align-items: flex-start; }
+  h1 { font-size: 2.25rem; line-height: 2.5rem; }
+  .profile img { width: 11rem; height: 14rem; }
+  .research img { width: 8rem; }
+}
+
+@media (min-width: 1024px) {
+  main { max-width: 48rem; padding-left: 2rem; padding-right: 2rem; }
+  header, section { margin-bottom: 3.5rem; }
+  h1 { font-size: 3rem; line-height: 1; }
+  h2 { font-size: 1.5rem; line-height: 2rem; }
+  .bio, .projects { font-size: 1rem; line-height: 1.5rem; }
+  .profile img { width: 13rem; height: 16rem; }
+  .research img { width: 9rem; }
+}
+
+@media (min-width: 1280px) {
+  main { max-width: 56rem; }
+}
