@@ -71,9 +71,9 @@ h1 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 600; margin-bottom:
 
 blockquote {
   max-width: 28rem;
-  margin-left: auto;
   margin-bottom: 1.5rem;
-  text-align: right;
+  padding-left: 1rem;
+  border-left: 2px solid hsl(var(--border));
   font-size: 0.875rem;
   line-height: 1.625;
   font-style: italic;
@@ -81,7 +81,9 @@ blockquote {
 }
 
 .bio { font-size: 0.875rem; line-height: 1.625; }
-.bio > p + p { margin-top: 1rem; }
+.bio > * + * { margin-top: 1rem; }
+.previously { list-style: disc; padding-left: 1.25rem; }
+.previously > li + li { margin-top: 0.25rem; }
 
 .profile { flex-shrink: 0; align-self: flex-start; }
 .profile img { width: 9rem; height: 12rem; object-fit: cover; border-radius: calc(var(--radius) - 2px); }
@@ -107,9 +109,6 @@ h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; margin-bottom: 
 .research .title { font-size: 0.875rem; line-height: 1.25rem; }
 .research .meta { font-size: 0.75rem; line-height: 1rem; }
 
-.projects { font-size: 0.875rem; line-height: 1.25rem; }
-.projects > li + li { margin-top: 1rem; }
-
 .hidden-note {
   margin-top: 4rem;
   font-size: 0.75rem;
@@ -132,7 +131,7 @@ h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; margin-bottom: 
   header, section { margin-bottom: 3.5rem; }
   h1 { font-size: 3rem; line-height: 1; }
   h2 { font-size: 1.5rem; line-height: 2rem; }
-  .bio, .projects { font-size: 1rem; line-height: 1.5rem; }
+  .bio { font-size: 1rem; line-height: 1.5rem; }
   .profile img { width: 13rem; height: 16rem; }
   .research img { width: 9rem; }
 }
