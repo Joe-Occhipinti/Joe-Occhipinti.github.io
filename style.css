@@ -109,6 +109,9 @@ h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; margin-bottom: 
 .research .title { font-size: 0.875rem; line-height: 1.25rem; }
 .research .meta { font-size: 0.75rem; line-height: 1rem; }
 
+.projects { font-size: 0.875rem; line-height: 1.25rem; }
+.projects > li + li { margin-top: 1rem; }
+
 .hidden-note {
   margin-top: 4rem;
   font-size: 0.75rem;
@@ -131,7 +134,7 @@ h2 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; margin-bottom: 
   header, section { margin-bottom: 3.5rem; }
   h1 { font-size: 3rem; line-height: 1; }
   h2 { font-size: 1.5rem; line-height: 2rem; }
-  .bio { font-size: 1rem; line-height: 1.5rem; }
+  .bio, .projects { font-size: 1rem; line-height: 1.5rem; }
   .profile img { width: 13rem; height: 16rem; }
   .research img { width: 9rem; }
 }
