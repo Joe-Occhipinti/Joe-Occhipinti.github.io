@@ -1,0 +1,103 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{tgtermes} % TeX Gyre Termes: a Times-style serif typeface.
+\usepackage[left=20mm,right=20mm,top=18mm,bottom=18mm]{geometry}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\definecolor{linkblue}{HTML}{165A9D}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
+  pdftitle={Giovanni Maria Occhipinti - Curriculum Vitae},
+  pdfauthor={Giovanni Maria Occhipinti}}
+\urlstyle{same}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\raggedright
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\setlist[itemize]{leftmargin=15pt,label=\textendash,
+  topsep=2pt,itemsep=1pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\par\addvspace{6pt}%
+  \textbf{#1}~|~#2~|~#3\par}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE Giovanni Maria Occhipinti}\\[4pt]
+  \href{mailto:occhidipinti00@gmail.com}{occhidipinti00@gmail.com}
+  \enspace\textbar\enspace
+  \href{https://www.linkedin.com/in/occhipintigiovanni/}{LinkedIn}
+  \enspace\textbar\enspace
+  \href{https://github.com/Joe-Occhipinti}{GitHub}
+  \enspace\textbar\enspace
+  +39 334 313 9502
+\end{center}
+\vspace{-6pt}
+
+\section*{Education}
+\textbf{MSc in Data, Methods, and Models for Linguistics --- University of Bologna} \enspace\textbar\enspace 2023--2025 \enspace\textbar\enspace GPA: 4.00
+\begin{itemize}
+  \item Master's thesis research --- University of Oxford, August--December 2025.
+  \item Erasmus exchange --- University College Dublin, September--May 2025.
+\end{itemize}
+\vspace{3pt}
+\textbf{Bachelor's Degree in Humanities --- University of Bologna} \enspace\textbar\enspace 2019--2023
+
+\section*{Research Experience}
+
+\role{AI Safety Research Fellow}{\href{https://erafellowship.org/}{ERA Fellowship}, Cambridge}{July--September 2026}
+\begin{itemize}
+  \item Led a red-teaming audit of Codex and Auto-review, OpenAI's action-blocking monitor; shared findings and patch recommendations with OpenAI. Mentored by Monika Jotautait\.{e} (Apollo Research).
+  \item Developed a methodology and attack taxonomy for red-teaming control measures in production harnesses.
+  \item Ongoing extension: developing a scaffold to automate attack discovery against harnesses and control measures, and a benchmark to evaluate models on this task.
+\end{itemize}
+
+\role{AI Safety Research Fellow}{\href{https://sparai.org/}{SPAR}}{March--May 2026}
+\begin{itemize}
+  \item Investigated self-prediction capabilities in LLM agents over long-horizon trajectories.
+  \item Designed agent scaffolds, evaluation tasks, and environments to assess agents' ability to predict their own behaviour, including misaligned behaviour.
+  \item \href{https://openreview.net/forum?id=g3O9cQQX1G}{Workshop paper} accepted at NeurIPS 2026.
+\end{itemize}
+
+\role{Visiting AI Safety Researcher}{\href{https://oxcav.web.ox.ac.uk/}{OXCAV}, University of Oxford}{September 2025--January 2026}
+\begin{itemize}
+  \item Investigated activation probing and steering for chain-of-thought unfaithfulness in reasoning models.
+  \item Built a representation engineering pipeline using logistic-regression and MLP probes, Contrastive Activation Addition, and MLP-guided intervention.
+  \item Elicited unfaithful behaviour through adversarial prompting on MMLU.
+  \item Awarded a research grant by the \href{https://cosmos-institute.org/}{Cosmos Institute}.
+  \item \href{https://openreview.net/forum?id=LocRunEIxK}{Workshop paper} accepted at ICLR 2026.
+\end{itemize}
+
+\role{AI Research Intern}{\href{https://aial.ie/}{AIAL}, Trinity College Dublin}{June--July 2025}
+\begin{itemize}
+  \item Built the proof of concept for NAGICOR (Narratives of AGI Corpus), supervised by Abeba Birhane.
+  \item Outlined corpus, topic-modelling, and research-agent tools to help AI governance and safety stakeholders track theories, capabilities, safety, and policy trends in the AGI debate.
+\end{itemize}
+
+\role{AI Research Intern}{\href{https://www.glaut.com/}{Glaut}}{June--July 2024}
+\begin{itemize}
+  \item Designed a capability evaluation framework for Glaut's customer-interview chatbot.
+  \item Designed experiments involving 200+ participants and 2,000+ responses.
+  \item Scaled annotation and analysis of unstructured text using LLM judges.
+\end{itemize}
+
+\section*{Selected Projects}
+\begin{itemize}
+  \item \href{https://github.com/Joe-Occhipinti/Chiron-ControlArena}{\textbf{Chiron}} --- agentic plugin for automated setting design in ControlArena. Apart Research hackathon: top 25\%.
+  \item \href{https://www.instagram.com/p/C-dNyj1NoE0/}{\textbf{Yaya Labs hackathon winner}} --- headset for robots that converts environmental data into dreams.
+  \item \href{https://www.ifabfoundation.org/2024/06/07/the-2024-edition-of-ifab-4-next-generation-talents-comes-to-a-close-young-talents-ideas-to-tackle-future-challenges-with-supercomputing-technologies/}{\textbf{IFAB hackathon winner}} --- AI agent to help factory maintenance teams analyse and predict failures.
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}
+  \item \textbf{Programming and tools:} Python, R, PyTorch, TransformerLens, Inspect, ControlArena, LinuxArena, Docker, vLLM, RunPod.
+  \item \textbf{Research areas:} Dangerous capabilities and AI control evaluations, red-teaming of control measures, and white-box control.
+\end{itemize}
+
+\end{document}

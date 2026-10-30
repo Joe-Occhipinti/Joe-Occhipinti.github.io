@@ -1,0 +1,8 @@
+# LaTeX build output (cv.pdf is built by the GitHub workflow)
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.fls
+cv/*.fdb_latexmk
+cv/*.synctex.gz
+cv/*.pdf
